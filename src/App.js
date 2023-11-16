@@ -1,5 +1,4 @@
 /* eslint-disable no-undef */
-import logo from './logo.svg';
 import './App.css';
 import { useEffect } from 'react';
 
@@ -10,6 +9,8 @@ function App() {
     document.getElementById('btnGo').addEventListener('click', (ev) => {
       const output = document.getElementById('result');
 
+      // @ts-ignore
+      // eslint-disable-next-line no-unsafe-negation
       if (!'EyeDropper' in window) {
         output.textContent = 'Sorry. No support for the Eyedropper API';
         return;
